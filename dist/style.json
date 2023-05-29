@@ -1,0 +1,34 @@
+{
+  "version": 8,
+  "name": "PMtilesSample",
+  "sources": {
+      "mapbox://mapbox.satellite": {
+          "url": "mapbox://mapbox.satellite",
+          "type": "raster",
+          "tileSize": 256
+      },
+      "pmtiles": {
+          "type": "vector",
+          "url": "pmtiles://https://d34j6iplycp4rd.cloudfront.net/hello.pmtiles"
+      }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+      {
+          "id": "satellite",
+          "type": "raster",
+          "maxzoom": 12.1,
+          "source": "mapbox://mapbox.satellite"
+      },
+      {
+          "id": "pmtiles-circle",
+          "source": "pmtiles",
+          "source-layer": "hello",
+          "type": "circle",
+          "paint": {
+              "circle-radius": 2,
+              "circle-color": "red"
+          }
+      }
+  ]
+}
