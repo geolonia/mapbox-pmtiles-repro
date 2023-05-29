@@ -2,7 +2,7 @@ import { enablePmtilesProtocol } from "./pmtiles"
 
 const main = async () => {
   enablePmtilesProtocol()
-  mapboxgl.accessToken = // TODO
+  mapboxgl.accessToken = 'pk.eyJ1Ijoia2FtYXRhcnlvIiwiYSI6ImNsaTJydDJ1ODA4bGEzam4waHlxMWZiMnYifQ.oikexEXnoSym6eoa_nfEcw'
 
   const styleResp = await fetch('./style.json')
   const style = await styleResp.json()
